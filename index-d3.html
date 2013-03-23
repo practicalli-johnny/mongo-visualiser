@@ -1,0 +1,19 @@
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<head>
+</head>
+
+<body>
+<p>
+This is an ever changing piece of text, hopefully.
+<p>
+</body>
+
+<script>
+var paragraphs = document.getElementsByTagName("p");
+for (var i = 0; i < paragraphs.length; i++) {
+  var paragraph = paragraphs.item(i);
+  paragraph.style.setProperty("color", "white", null);
+}
+
+</script>
