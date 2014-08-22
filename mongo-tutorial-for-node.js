@@ -20,13 +20,16 @@ MongoClient.connect("mongodb://localhost:27017/test", function(err, db) {
   if(!err) {
     console.log("We are connected");
 
-  var collection = db.collection('test');
-  collection.findOne({"Name" : "John"}, function(err, results) {
+  var collection = db.collection('hackathon');
+
+//   collection.findOne({"Name" : "John"}, function(err, results) {
+
+  collection.find({counters: 1, _id: 0}, function(err, results) {
+
   console.dir(results);
   db.close();
 
   });
-
 }});
 
 
